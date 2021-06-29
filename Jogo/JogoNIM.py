@@ -30,7 +30,7 @@ def partida():
     n = int(input('Digite o número de peças iniciais: ')) #variavel obrigatoria
     m = int(input('Digite quantas peças podem ser retiradas por rodada: ')) #variavel obrigatoria
 
-    while m > n: #Repetição para verificar se os valores n e m são validos.
+    while m > n or m == n: #Repetição para verificar se os valores n e m são validos.
         print('O número de peças inicias deve ser maior que o número de peças que podem ser retiradas\n')
         n = int(input('Digite o número de peças iniciais: ')) #variavel obrigatoria
         m = int(input('Digite quantas peças podem ser retiradas por rodada: ')) #variavel obrigatoria
@@ -55,7 +55,7 @@ def partida():
 
     else:
 
-        print('Computador começa!!\n')
+        print('\nComputador começa!!\n')
 
         while n > 0: #Repetição para a partida acabar quando as peças acabarem
             jogadaDoCoumputador = computador_escolhe_jogada(n,m)
@@ -75,7 +75,7 @@ def campeonato():
     rodada = 1
 
     while vitoriasDoComputador < 3: #Repetiçao para acabar o campeonato depois de 3 partidas
-        print(f'rodada {rodada}\n')
+        print(f'\nrodada {rodada}\n')
         partida()
         vitoriasDoComputador += 1
         rodada += 1
@@ -83,7 +83,7 @@ def campeonato():
 
 
     
-print('######## BEM VINDO AO JOGO NIM ########\n Modos de Jogo:\n')
+print('######## BEM VINDO AO JOGO NIM ########\nModos de Jogo:\n')
 escolha = 0
 
 while escolha < 1 or escolha > 2: #Repetiçáo para checar se o modo escolhido é valido
